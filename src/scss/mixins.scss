@@ -1,0 +1,7 @@
+@mixin font-normal ($font-size, $line-height) {
+  font: normal $font-size/$line-height "Railway", "Arial", sans-serif;
+}
+
+@mixin font-bold ($font-size, $line-height) {
+  font: bold $font-size/$line-height "Railway", "Arial", sans-serif;
+}
