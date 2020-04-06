@@ -16,37 +16,50 @@
 <body>
   <div class="top-bg">
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <img src="img/logo.svg" width="91" height="36.71" alt="Veles">
-        </a>
-        <button class="page-header__toggler">Открыть / закрыть меню</button>
-        <nav class="page-header__menu">
-          <ul class="page-header__nav-list">
-            <li><a class="page-header__nav-link" href="#">Земля</a></li>
-            <li><a class="page-header__nav-link" href="#">Крановые площадки</a></li>
-            <li><a class="page-header__nav-link" href="#">Выгрузка грузов</a></li>
-            <li><a class="page-header__nav-link" href="#">Фасовка</a></li>
-            <li><a class="page-header__nav-link" href="#">Щебень</a></li>
-          </ul>
-        </nav>
-        <address class="header-nav__contacts">
-          <span class="header-nav__contacts-item header-nav__contacts-item--tel">+7 (927) 678-45-14</span>
-          <span class="header-nav__contacts-item header-nav__contacts-item--addr">г. Казань, Складская 20</span>
+      <a href="#" class="page-header__logo">
+        <img src="img/logo.svg" width="91" height="36.71" alt="Veles">
+      </a>
+      <button class="page-header__toggler">Открыть / закрыть меню</button>
+      <nav class="page-header__menu">
+        <ul class="page-header__nav-list">
+          <li><a class="page-header__nav-link" href="#">Земля</a></li>
+          <li><a class="page-header__nav-link" href="#">Крановые площадки</a></li>
+          <li><a class="page-header__nav-link" href="#">Фасовка</a></li>
+          <li><a class="page-header__nav-link" href="#">Щебень</a></li>
+          <li><a class="page-header__nav-link" href="#">Выгрузка грузов</a></li>
+        </ul>
+        <address class="page-header__contacts">
+          <a href="#" class="page-header__contacts-link page-header__contacts-link--tel">
+            <svg role="img" width="9" height="13" viewbox="0 0 9 13" aria-label="Телефон">
+              <use xlink:href="img/sprite_auto.svg#icon-tel"></use>
+            </svg>+7 (927) 678-45-14</a>
+          <a href="#" class="page-header__contacts-link page-header__contacts-link--addr">
+            <svg role="img" width="9" height="14" viewbox="0 0 9 14" aria-label="Адрес">
+              <use xlink:href="img/sprite_auto.svg#icon-addr"></use>
+            </svg>г. Казань, Складская 20</a>
         </address>
-      </div>
+      </nav>
     </header>
     <section class="promo">
-      <h1 class="promo__title visually-hidden">Veles</h1>
-      <p class="promo__text">Выгрузка вагонов, аренда земли, крановых площадок, ответственное хранение</p>
-      <div class="slider__wrapper">
-        <div class="promo__slider slider slider--nojs">
-          <div class="slider__controls">
-            <button class="slider__left">Влево</button>
-            <div class="slider__display">
-              <span class="slider__order">1</span> / <span class="quantity">3</span>
-            </div>
-            <button class="slider__right">Вправо</button>
+      <div class="promo__wrapper">
+        <h1 class="promo__title visually-hidden">Veles</h1>
+        <p class="promo__text">Выгрузка вагонов, аренда земли, крановых площадок, ответственное хранение</p>
+        <a href="#" class="promo__link">Заказать</a>
+      </div>
+      <div class="promo__slider slider">
+        <div class="slider__controls">
+          <button class="slider__control slider__control--left" disabled="">Влево</button>
+          <div class="slider__display">
+            <span class="slider__order">1</span> / <span class="slider__quantity">3</span>
+          </div>
+          <button class="slider__control slider__control--right">Вправо</button>
+        </div>
+        <div class="slider__wrapper">
+          <div class="slider__item slider__item--slide1">
+          </div>
+          <div class="slider__item slider__item--slide2">
+          </div>
+          <div class="slider__item slider__item--slide3">
           </div>
         </div>
       </div>
@@ -215,6 +228,8 @@
       </address>
     </div>
   </footer>
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
 </body>
 
 </html>

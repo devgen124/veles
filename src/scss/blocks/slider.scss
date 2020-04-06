@@ -1,0 +1,104 @@
+.slider {
+  width: $slider-img-width;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.slider__controls {
+  position: absolute;
+  right: calc((100% - #{$desktop-content-width}) / 2 + #{$slider-img-width} - #{$desktop-horiz-margin} + #{$desktop-horiz-padding});
+  bottom: 39px + $slider-negative-margin;
+  display: flex;
+}
+
+.slider__control {
+  padding: 3px;
+  width: 25px;
+
+  font-size: 0;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+
+  &--left {
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='9' viewBox='0 0 25 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5H1M1 5L3.5 1M1 5L4 8.5' stroke='white'/%3E%3C/svg%3E%0A");
+  }
+
+  &--right {
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='9' viewBox='0 0 25 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5H24M24 5L21.5 1M24 5L21 8.5' stroke='white'/%3E%3C/svg%3E%0A");
+  }
+
+  &:disabled {
+    opacity: .3;
+  }
+}
+
+.slider__display {
+  margin: 0 20px;
+
+  @include font-normal(18px, 21px);
+}
+
+.slider__wrapper {
+  height: 100%;
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slider__item {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 100%;
+  max-width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &--slide1 {
+    background-image: url("../img/slide1.jpg");
+  }
+
+  &--slide2 {
+    background-image: url("../img/slide2.jpg");
+  }
+
+  &--slide3 {
+    background-image: url("../img/slide3.jpg");
+  }
+}
+
+@media (max-width: $desktop-width - 1) {
+  .slider__controls {
+    bottom: 35px;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .slider {
+    width: auto;
+    flex-shrink: 1;
+  }
+  .slider__wrapper {
+    position: absolute;
+    z-index: -1;
+    width: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .slider__item {
+    filter: brightness(50%);
+  }
+
+  .slider__controls {
+    z-index: 2;
+    right: $mobile-horiz-padding;
+    bottom: 22px;
+  }
+}
