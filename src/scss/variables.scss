@@ -3,6 +3,11 @@ $black: #161616;
 $yellow: #ffe500;
 $grey: #f1f2f5;
 $white: #ffffff;
+$dark-grey: #48494d;
+
+//шрифты
+
+$font-family: "Raleway", "Arial", sans-serif;
 
 // переменные сетки
 $widescreen-width: 1920px;
@@ -11,9 +16,8 @@ $desktop-horiz-margin: 340px;
 $desktop-horiz-padding: $desktop-layout-margin - $desktop-horiz-margin;
 $desktop-content-width: $widescreen-width - $desktop-horiz-margin * 2;
 
-$mobile-layout-width: 320px;
+$mobile-layout-width: 288px;
 $mobile-horiz-padding: 16px;
-$mobile-content-width: $mobile-layout-width - $mobile-horiz-padding * 2;
 
 
 // переменные брэйкпоинтов вьюпорта

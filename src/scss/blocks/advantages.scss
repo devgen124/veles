@@ -1,0 +1,116 @@
+$advantages-desktop-padding-top: 100px;
+$advantages-desktop-padding-bottom: 143px;
+
+$advantages-desktop-item-margin-left: 80px;
+$advantages-desktop-item-margin-bottom: 85px;
+
+$advantages-tablet-item-horiz-margin: 25px;
+
+.advantages {
+  display: flex;
+  justify-content: center;
+}
+
+.advantages__wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $desktop-content-width;
+  padding: $advantages-desktop-padding-top 0 $advantages-desktop-padding-bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 84px;
+    @include section-heading();
+  }
+}
+
+.advantages__list {
+  margin-bottom: -$advantages-desktop-item-margin-bottom;
+  display: flex;
+  flex-wrap: wrap;
+
+  counter-reset: num;
+
+  li {
+    box-sizing: border-box;
+    padding-left: 91px;
+    padding-right: 69px;
+    position: relative;
+    z-index: 1;
+    width: calc(33.3% - #{$advantages-desktop-item-margin-left});
+    margin-left: percentage($advantages-desktop-item-margin-left / $desktop-content-width);
+    margin-bottom: $advantages-desktop-item-margin-bottom;
+
+    font: 600 16px/19px $font-family;
+    counter-increment: num;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      width: 51px;
+      height: 51px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      content: counter(num);
+      font: 600 20px/21px $font-family;
+      background-color: $yellow;
+    }
+
+    &:nth-child(-n+9)::before {
+      content: "0"counter(num);
+    }
+
+    &::after {
+      position: absolute;
+      top: -65px;
+      left: 91px;
+
+      content: counter(num);
+      font: 600 80px/94px $font-family;
+      color: rgba(0, 0, 0, 0.03);
+    }
+  }
+}
+
+@media (max-width: $desktop-width - 1) {
+  .advantages__list {
+    padding: 0 $desktop-horiz-padding;
+    justify-content: space-between;
+
+    li {
+      padding-left: 70px;
+      padding-right: 30px;
+      margin-left: 0;
+      width: calc(33.3% - #{$advantages-tablet-item-horiz-margin});
+    }
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .advantages__wrapper {
+    max-width: $mobile-layout-width;
+    padding: 13px 0 60px;
+  }
+
+  .advantages__list {
+    flex-flow: column nowrap;
+    padding: 0;
+
+    li {
+      width: auto;
+      padding-left: 91px;
+      padding-right: 25px;
+      margin-left: 7px;
+
+      color: $dark-grey;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

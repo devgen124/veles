@@ -69,7 +69,6 @@
 
 (function () {
   var _toggler = document.querySelector('.page-header__toggler');
-  var _navMenu = document.querySelector('.page-header__menu');
   var _promo = document.querySelector('.promo');
   var _header = document.querySelector('.page-header');
 

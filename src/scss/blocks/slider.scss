@@ -21,6 +21,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   border: none;
+  cursor: pointer;
 
   &--left {
     background-image: url("data:image/svg+xml,%3Csvg width='25' height='9' viewBox='0 0 25 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5H1M1 5L3.5 1M1 5L4 8.5' stroke='white'/%3E%3C/svg%3E%0A");
@@ -36,9 +37,10 @@
 }
 
 .slider__display {
-  margin: 0 20px;
+  width: 70px;
 
   @include font-normal(18px, 21px);
+  text-align: center;
 }
 
 .slider__wrapper {
@@ -98,7 +100,7 @@
 
   .slider__controls {
     z-index: 2;
-    right: $mobile-horiz-padding;
+    right: 16px;
     bottom: 22px;
   }
 }

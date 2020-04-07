@@ -5,10 +5,12 @@ body {
   min-width: 320px;
   display: flex;
   flex-direction: column;
+
+  font-family: $font-family;
+  color: $black;
 }
 
 main {
-  overflow: hidden;
   flex: 1 0 auto;
   box-sizing: inherit;
 }
@@ -22,7 +24,8 @@ address {
   font-style: normal;
 }
 
-ul {
+ul,
+ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;

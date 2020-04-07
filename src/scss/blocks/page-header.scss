@@ -134,7 +134,7 @@ $navmenu-mobile-padding-bottom: 95px;
     justify-content: center;
     width: 100%;
     box-sizing: inherit;
-    padding: $navmenu-mobile-padding-top - $nav-item-vert-mobile-padding $mobile-horiz-padding $navmenu-mobile-padding-bottom - $nav-item-vert-mobile-padding;
+    padding: $navmenu-mobile-padding-top - $nav-item-vert-mobile-padding 16px $navmenu-mobile-padding-bottom - $nav-item-vert-mobile-padding;
 
   }
 

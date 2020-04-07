@@ -64,7 +64,7 @@ $promo-content-width: $desktop-content-width - ($slider-img-width - $desktop-hor
     z-index: 1;
     justify-content: center;
     box-sizing: border-box;
-    padding: 169px $mobile-horiz-padding 87px;
+    padding: 169px 0 87px;
 
     &--hidden {
       display: none;
@@ -72,7 +72,7 @@ $promo-content-width: $desktop-content-width - ($slider-img-width - $desktop-hor
   }
 
   .promo__wrapper {
-    width: $mobile-content-width;
+    width: $mobile-layout-width;
     padding: 0;
     flex-shrink: 1;
   }
