@@ -6,6 +6,8 @@ $advantages-desktop-item-margin-bottom: 85px;
 
 $advantages-tablet-item-horiz-margin: 25px;
 
+$advantages-mobile-item-margin-bottom: 35px;
+
 .advantages {
   display: flex;
   justify-content: center;
@@ -40,6 +42,7 @@ $advantages-tablet-item-horiz-margin: 25px;
     position: relative;
     z-index: 1;
     width: calc(33.3% - #{$advantages-desktop-item-margin-left});
+    min-height: 51px;
     margin-left: percentage($advantages-desktop-item-margin-left / $desktop-content-width);
     margin-bottom: $advantages-desktop-item-margin-bottom;
 
@@ -86,6 +89,7 @@ $advantages-tablet-item-horiz-margin: 25px;
       padding-right: 30px;
       margin-left: 0;
       width: calc(33.3% - #{$advantages-tablet-item-horiz-margin});
+      height: 51px;
     }
   }
 }
@@ -99,12 +103,14 @@ $advantages-tablet-item-horiz-margin: 25px;
   .advantages__list {
     flex-flow: column nowrap;
     padding: 0;
+    margin-bottom: -$advantages-mobile-item-margin-bottom;
 
     li {
       width: auto;
       padding-left: 91px;
-      padding-right: 25px;
+      padding-right: 15px;
       margin-left: 7px;
+      margin-bottom: $advantages-mobile-item-margin-bottom;
 
       color: $dark-grey;
 
