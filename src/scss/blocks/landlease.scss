@@ -1,0 +1,115 @@
+$landlease-img-width: 570px;
+$landlease-img-height: 488px;
+$landlease-content-width: $desktop-content-width - $landlease-img-width;
+$landlease-content-padding-right: 150px;
+$landlease-img-y-shift: 66px;
+$landlease-img-x-shift: 60px;
+
+.landlease {
+  display: flex;
+  justify-content: center;
+}
+
+.landlease__wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $desktop-content-width;
+  padding: $landlease-img-y-shift $desktop-horiz-padding+20px 191px;
+  display: flex;
+}
+
+.landlease__column {
+  box-sizing: border-box;
+  max-width: percentage($landlease-content-width/$desktop-content-width);
+  padding-top: 91px;
+  padding-right: percentage($landlease-content-padding-right/$desktop-content-width);
+
+  h2 {
+    margin-bottom: 25px;
+
+    font: bold 30px/35px $font-family;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: 40px;
+    font: 15px/18px $font-family;
+  }
+
+  a {
+    display: inline-block;
+    padding: 20px 30px;
+    font: bold 12px/14px $font-family;
+    letter-spacing: 2px;
+    color: $white;
+    background-color: $black;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.landlease__pic {
+  flex-shrink: 0;
+  box-shadow: #{-$landlease-img-x-shift} #{-$landlease-img-y-shift} $grey;
+
+  img {
+    display: block;
+  }
+}
+
+@media (max-width: $desktop-width - 1) {
+  .landlease__wrapper {
+    padding: 0 $desktop-horiz-padding 100px;
+    flex-direction: column-reverse;
+  }
+
+  .landlease__pic {
+    flex-shrink: 1;
+    box-shadow: none;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .landlease__column {
+    padding: 40px 0 0;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      padding: 0 65px;
+
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .landlease__wrapper {
+    width: $mobile-layout-width;
+    padding: 0 0 60px;
+  }
+
+  .landlease__column {
+    padding-top: 18px;
+    align-items: stretch;
+
+    h2 {
+      margin-bottom: 20px;
+      align-self: center;
+
+      font: bold 18px/21px $font-family;
+      letter-spacing: 0.12em;
+    }
+
+    p {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
