@@ -51,10 +51,10 @@ $landlease-img-x-shift: 60px;
 
 .landlease__pic {
   flex-shrink: 0;
-  box-shadow: #{-$landlease-img-x-shift} #{-$landlease-img-y-shift} $grey;
 
   img {
     display: block;
+    box-shadow: #{-$landlease-img-x-shift} #{-$landlease-img-y-shift} $grey;
   }
 }
 
@@ -66,11 +66,11 @@ $landlease-img-x-shift: 60px;
 
   .landlease__pic {
     flex-shrink: 1;
-    box-shadow: none;
 
     img {
       width: 100%;
       height: auto;
+      box-shadow: none;
     }
   }
 

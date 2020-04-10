@@ -221,7 +221,6 @@
             негабаритных грузов. Собственный ж.д. подъездной путь. Охраняемая территория, удобные подъездные пути для
             любых видов транспорта. На закрытой территории базы обеспечивается функционирование всех инженерных сетей.
           </p>
-
           <a href="#">Получить консультацию</a>
         </div>
         <div class="storage__pic">
@@ -233,30 +232,40 @@
       </div>
     </section>
     <section class="consult">
-      <h2 class="consult__title">Узнать о ценах, получить консультацию или персональное предложение</h2>
-      <form action="" class="consult__form main-form">
-        <input type="text" name="name" class="main-form__name-input" placeholder="Имя" />
-        <input class="main-form__tel-input" type="tel" name="tel" placeholder="Телефон" />
-        <button class="main-form__btn" type="submit">Отправить</button>
-      </form>
+      <div class="consult__wrapper">
+        <h2 class="consult__title">Узнать о ценах, получить консультацию или персональное предложение</h2>
+        <form action="" class="consult__form">
+          <input type="text" name="name" placeholder="Имя" />
+          <input type="tel" name="tel" placeholder="Телефон" />
+          <button class="consult__form__btn" type="submit">Отправить</button>
+        </form>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
-    <div class="wrapper">
-      <a class="page-footer">Veles</a>
-      <nav class="page-footer__menu footer-nav">
-        <ul class="footer-nav__list">
-          <li><a class="footer-nav__link" href="#">Земля</a></li>
-          <li><a class="footer-nav__link" href="#">Крановые площадки</a></li>
-          <li><a class="footer-nav__link" href="#">Выгрузка грузов</a></li>
-          <li><a class="footer-nav__link" href="#">Фасовка</a></li>
-          <li><a class="footer-nav__link" href="#">Щебень</a></li>
+    <div class="page-footer__wrapper">
+      <a href="#" class="page-footer__logo">
+        <img src="img/logo.svg" width="91" height="36.71" alt="Veles">
+      </a>
+      <nav class="page-footer__menu">
+        <ul class="page-footer__nav-list">
+          <li><a class="page-footer__nav-link" href="#">Земля</a></li>
+          <li><a class="page-footer__nav-link" href="#">Крановые площадки</a></li>
+          <li><a class="page-footer__nav-link" href="#">Фасовка</a></li>
+          <li><a class="page-footer__nav-link" href="#">Щебень</a></li>
+          <li><a class="page-footer__nav-link" href="#">Выгрузка грузов</a></li>
         </ul>
+        <address class="page-footer__contacts">
+          <a href="#" class="page-footer__contacts-link page-footer__contacts-link--tel">
+            <svg role="img" width="9" height="13" viewbox="0 0 9 13" aria-label="Телефон">
+              <use xlink:href="img/sprite_auto.svg#icon-tel"></use>
+            </svg>+7 (927) 678-45-14</a>
+          <a href="#" class="page-footer__contacts-link page-footer__contacts-link--addr">
+            <svg role="img" width="9" height="14" viewbox="0 0 9 14" aria-label="Адрес">
+              <use xlink:href="img/sprite_auto.svg#icon-addr"></use>
+            </svg>г. Казань, Складская 20</a>
+        </address>
       </nav>
-      <address class="footer-nav__contacts">
-        <span>+7 (927) 678-45-14</span>
-        <span>г. Казань, Складская 20</span>
-      </address>
     </div>
   </footer>
   <script src="js/main.js"></script>

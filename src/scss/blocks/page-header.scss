@@ -1,6 +1,6 @@
 $header-vert-desk-padding: 30px;
 $nav-item-vert-padding: 36.71px - 15px;
-$nav-item-horiz-padding: 30px;
+$nav-item-horiz-padding: 15px;
 $nav-item-vert-mobile-padding: 19.5px;
 $navmenu-mobile-padding-top: 109px;
 $navmenu-mobile-padding-bottom: 95px;
@@ -10,7 +10,7 @@ $navmenu-mobile-padding-bottom: 95px;
   box-sizing: border-box;
   max-width: $desktop-content-width;
   width: 100%;
-  padding: $header-vert-desk-padding / 2 $desktop-horiz-padding;
+  padding: $header-vert-desk-padding $desktop-horiz-padding;
 
 }
 
@@ -41,7 +41,7 @@ $navmenu-mobile-padding-bottom: 95px;
   max-width: 650px;
 
   li {
-    padding: $nav-item-vert-padding / 2 $nav-item-horiz-padding / 2;
+    padding: $nav-item-vert-padding / 2 $nav-item-horiz-padding;
   }
 }
 
@@ -52,7 +52,7 @@ $navmenu-mobile-padding-bottom: 95px;
 }
 
 .page-header__contacts-link {
-  margin: $nav-item-vert-padding / 2 $nav-item-horiz-padding / 2;
+  margin: $nav-item-vert-padding / 2 $nav-item-horiz-padding;
 
   svg {
     margin-right: 9px;
