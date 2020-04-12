@@ -17,9 +17,11 @@
   <div class="top-bg">
     <header class="page-header">
       <a href="#" class="page-header__logo">
-        <img src="img/logo.svg" width="91" height="36.71" alt="Veles">
+        <svg role="img" width="91" height="38" fill="none" aria-label="Логотип">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
       </a>
-      <button class="page-header__toggler">Открыть / закрыть меню</button>
+      <button class="page-header__toggler"><span>Открыть / закрыть меню</span></button>
       <nav class="page-header__menu">
         <ul class="page-header__nav-list">
           <li><a class="page-header__nav-link" href="#">Земля</a></li>
@@ -30,11 +32,11 @@
         </ul>
         <address class="page-header__contacts">
           <a href="#" class="page-header__contacts-link page-header__contacts-link--tel">
-            <svg role="img" width="9" height="13" viewbox="0 0 9 13" aria-label="Телефон">
+            <svg role="img" width="9" height="13" aria-label="Телефон">
               <use xlink:href="img/sprite_auto.svg#icon-tel"></use>
             </svg>+7 (927) 678-45-14</a>
           <a href="#" class="page-header__contacts-link page-header__contacts-link--addr">
-            <svg role="img" width="9" height="14" viewbox="0 0 9 14" aria-label="Адрес">
+            <svg role="img" width="9" height="14" aria-label="Адрес">
               <use xlink:href="img/sprite_auto.svg#icon-addr"></use>
             </svg>г. Казань, Складская 20</a>
         </address>
@@ -234,7 +236,7 @@
     <section class="consult">
       <div class="consult__wrapper">
         <h2 class="consult__title">Узнать о ценах, получить консультацию или персональное предложение</h2>
-        <form action="" class="consult__form">
+        <form action="#" method="post" class="consult__form">
           <input type="text" name="name" placeholder="Имя">
           <input type="tel" name="tel" placeholder="Телефон">
           <button class="consult__form__btn" type="submit">Отправить</button>
@@ -245,7 +247,9 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a href="#" class="page-footer__logo">
-        <img src="img/logo.svg" width="91" height="36.71" alt="Veles">
+        <svg role="img" width="91" height="38" viewbox="0 0 91 38" fill="none" aria-label="Логотип">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
       </a>
       <nav class="page-footer__menu">
         <ul class="page-footer__nav-list">
@@ -257,11 +261,11 @@
         </ul>
         <address class="page-footer__contacts">
           <a href="#" class="page-footer__contacts-link page-footer__contacts-link--tel">
-            <svg role="img" width="9" height="13" viewbox="0 0 9 13" aria-label="Телефон">
+            <svg role="img" width="9" height="13" aria-label="Телефон">
               <use xlink:href="img/sprite_auto.svg#icon-tel"></use>
             </svg>+7 (927) 678-45-14</a>
           <a href="#" class="page-footer__contacts-link page-footer__contacts-link--addr">
-            <svg role="img" width="9" height="14" viewbox="0 0 9 14" aria-label="Адрес">
+            <svg role="img" width="9" height="14" aria-label="Адрес">
               <use xlink:href="img/sprite_auto.svg#icon-addr"></use>
             </svg>г. Казань, Складская 20</a>
         </address>

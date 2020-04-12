@@ -46,6 +46,11 @@ $landlease-img-x-shift: 60px;
     background-color: $black;
     text-transform: uppercase;
     text-align: center;
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 15px rgba($black, .5);
+    }
   }
 }
 

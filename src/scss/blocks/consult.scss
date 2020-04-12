@@ -41,16 +41,32 @@ $consult-form-height: 55px;
     color: rgba($black, .5);
     background-color: $light-grey;
     border: none;
+
+    &:hover {
+      background-color: darken($light-grey, 2%);
+    }
+
+    &:active,
+    &:focus {
+      background-color: darken($light-grey, 7%);
+    }
   }
 
   button {
     padding: 0 44px;
+
     font: 600 12px/14px $font-family;
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: $white;
     background-color: $black;
     border: none;
+    cursor: pointer;
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 15px rgba($black, .5);
+    }
   }
 }
 

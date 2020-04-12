@@ -1,9 +1,22 @@
 $header-vert-desk-padding: 30px;
-$nav-item-vert-padding: 36.71px - 15px;
+$nav-item-vert-padding: 11px;
 $nav-item-horiz-padding: 15px;
 $nav-item-vert-mobile-padding: 19.5px;
 $navmenu-mobile-padding-top: 109px;
 $navmenu-mobile-padding-bottom: 95px;
+
+$toggler-width: 26px;
+$toggler-height: 18px;
+$toggler-bar-height: 2px;
+
+@keyframes underline {
+  from {
+    transform: scaleX(.1);
+    }
+  to {
+    transform: scaleX(1);
+  }
+}
 
 .page-header {
   display: flex;
@@ -11,7 +24,6 @@ $navmenu-mobile-padding-bottom: 95px;
   max-width: $desktop-content-width;
   width: 100%;
   padding: $header-vert-desk-padding $desktop-horiz-padding;
-
 }
 
 .page-header__logo {
@@ -19,6 +31,16 @@ $navmenu-mobile-padding-bottom: 95px;
   align-self: flex-start;
 
   line-height: 0;
+
+  svg {
+    fill: $black;
+    transition: fill .2s ease-in-out;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: lighten($black, 20%);
+  }
 }
 
 .page-header__toggler {
@@ -41,7 +63,25 @@ $navmenu-mobile-padding-bottom: 95px;
   max-width: 650px;
 
   li {
-    padding: $nav-item-vert-padding / 2 $nav-item-horiz-padding;
+    padding: $nav-item-vert-padding $nav-item-horiz-padding;
+  }
+}
+
+.page-header__nav-link {
+  display: inline-block;
+  position: relative;
+
+  &:hover::before,
+  &:focus::before {
+    position: absolute;
+    bottom: -$nav-item-vert-padding;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    animation: underline .3s ease-in-out;
+
+    content: "";
+    background-color:$white;
   }
 }
 
@@ -54,8 +94,15 @@ $navmenu-mobile-padding-bottom: 95px;
 .page-header__contacts-link {
   margin: $nav-item-vert-padding / 2 $nav-item-horiz-padding;
 
+  &:hover>svg,
+  &:focus>svg {
+    transform: scale(1.4);
+  }
+
   svg {
+    transition: transform .2s ease-in-out;
     margin-right: 9px;
+
     vertical-align: middle;
   }
 
@@ -101,6 +148,10 @@ $navmenu-mobile-padding-bottom: 95px;
     &--popup {
       position: relative;
 
+      .page-header__logo svg {
+        fill: lighten($black, 20%);
+      }
+
       .page-header__menu {
         display: flex;
       }
@@ -110,22 +161,72 @@ $navmenu-mobile-padding-bottom: 95px;
   .page-header__logo {
     position: relative;
     z-index: 3;
+
+    svg {
+      fill: none;
+    }
   }
 
   .page-header__toggler {
-    display: block;
-    width: 25px;
-    height: 25px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: $toggler-width;
+    height: $toggler-height;
 
     font-size: 0;
-    background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg width='26' height='18' viewBox='0 0 26 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 17H25M1 1H25H1ZM1 9H25H1Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-position: center;
-    background-repeat: no-repeat;
+    background: none;
     border: none;
 
+    span,
+    span::before,
+    span::after {
+      width: 100%;
+      height: $toggler-bar-height;
+
+      background-color: $white;
+      border-radius: 1px;
+    }
+
+    span {
+      position: relative;
+      transition: all 0s .3s;
+    }
+
+    span::before,
+    span::after {
+      position: absolute;
+      left: 0;
+
+      content: "";
+    }
+
+    span::before {
+      bottom: ($toggler-height - $toggler-bar-height)/2;
+      transition: bottom .3s .3s cubic-bezier(0.23, 1, 0.32, 1), transform .3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    span::after {
+      top: ($toggler-height - $toggler-bar-height)/2;
+      transition: top .3s .3s cubic-bezier(0.23, 1, 0.32, 1), transform .3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
     &--close {
-      background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 26L26 1M26 26L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      span {
+        background-color: rgba($white, 0);
+      }
+
+      span::before {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition: bottom .3s cubic-bezier(0.23, 1, 0.32, 1), transform .3s .3s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      span::after {
+        top: 0;
+        transform: rotate(45deg);
+        transition: top .3s cubic-bezier(0.23, 1, 0.32, 1), transform .3s .3s cubic-bezier(0.23, 1, 0.32, 1);
+      }
     }
   }
 
