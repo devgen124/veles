@@ -35,6 +35,11 @@ $map-img-width: 1109px;
 @media (max-width: $tablet-width - 1) {
   .map__wrapper {
     max-width: $mobile-layout-width;
+    padding-bottom: 50px;
+
+    h2 {
+      margin-bottom: 25px;
+    }
   }
 
   .map__pic {

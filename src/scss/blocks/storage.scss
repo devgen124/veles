@@ -1,0 +1,132 @@
+$storage-desktop-padding-top: 133px;
+$storage-desktop-content-padding-top: 72px;
+$storage-desktop-content-padding-right: 87px;
+$storage-content-width: 580px;
+$storage-img-width: 945px;
+$storage-img-inner-width: $storage-img-width - $desktop-layout-margin;
+$storage-img-downshift: 100px;
+
+.storage {
+  display: flex;
+  justify-content: center;
+  background-color: $black;
+  color: $white;
+  overflow: hidden;
+
+  background: linear-gradient(to top, transparent, transparent $storage-img-downshift, $black $storage-img-downshift);
+}
+
+.storage__wrapper {
+  box-sizing: border-box;
+  width: $desktop-content-width;
+  padding: $storage-desktop-padding-top $desktop-horiz-padding+20px 0;
+  display: flex;
+}
+
+.storage__column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: inherit;
+  width: 100%;
+  max-width: $storage-content-width;
+  padding-top: $storage-desktop-content-padding-top;
+  padding-right: percentage($storage-desktop-content-padding-right/$desktop-content-width);
+
+  h2 {
+    margin-bottom: 30px;
+
+    font: bold 30px/35px $font-family;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: 40px;
+
+    font: 15px/18px $font-family;
+  }
+
+  a {
+    display: inline-block;
+    padding: 20px 30px;
+
+    font: 12px/14px $font-family;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: $black;
+    border: 1px solid $white;
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 15px rgba($white, .5);
+    }
+  }
+}
+
+.storage__pic {
+  width: $storage-img-inner-width;
+  flex-shrink: 0;
+
+  img {
+    display: block;
+  }
+}
+
+@media (max-width: $desktop-width - 1) {
+  .storage {
+    background: $black;
+  }
+
+  .storage__wrapper {
+    padding: $desktop-horiz-padding $desktop-horiz-padding 40px;
+    flex-direction: column-reverse;
+  }
+
+  .storage__pic {
+    flex-shrink: 1;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .storage__column {
+    padding: 40px 0 0;
+    max-width: none;
+    align-items: center;
+
+    p {
+      padding: 0 65px;
+
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .storage__wrapper {
+    width: $mobile-layout-width;
+    padding: 0 0 35px;
+  }
+
+  .storage__column {
+    padding-top: 18px;
+    align-items: stretch;
+
+    h2 {
+      margin-bottom: 20px;
+      align-self: center;
+
+      font: bold 18px/21px $font-family;
+      letter-spacing: 0.12em;
+    }
+
+    p {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+  }
+}

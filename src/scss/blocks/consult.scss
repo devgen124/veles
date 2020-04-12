@@ -1,0 +1,102 @@
+$consult-margin-left: 663px;
+$consult-margin-right: 554px;
+$consult-content-padding-left: $consult-margin-left - $desktop-layout-margin;
+$consult-content-padding-right: $consult-margin-right - $desktop-layout-margin;
+$consult-vert-padding: 100px;
+$coltunt-mobile-vert-padding: 60px;
+
+$consult-form-height: 55px;
+
+.consult {
+  display: flex;
+  justify-content: center;
+}
+
+.consult__wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $desktop-content-width;
+  padding: $consult-vert-padding percentage($consult-content-padding-right/$desktop-content-width) $consult-vert-padding percentage($consult-content-padding-left/$desktop-content-width);
+
+  h2 {
+    margin-bottom: 31px;
+
+    font: bold 25px/29px $font-family;
+    text-align: center;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+}
+
+.consult__form {
+  display: flex;
+  height: $consult-form-height;
+
+  input {
+    margin-right: 15px;
+    flex-grow: 1;
+    padding: 0 15px;
+
+    font: 16px/19px $font-family;
+    color: rgba($black, .5);
+    background-color: $light-grey;
+    border: none;
+
+    &:hover {
+      background-color: darken($light-grey, 2%);
+    }
+
+    &:active,
+    &:focus {
+      background-color: darken($light-grey, 7%);
+    }
+  }
+
+  button {
+    padding: 0 44px;
+
+    font: 600 12px/14px $font-family;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $black;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 15px rgba($black, .5);
+    }
+  }
+}
+
+@media (max-width: $desktop-width - 1) {
+  .consult__wrapper {
+    padding: 40px $desktop-horiz-padding;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .consult__wrapper {
+    max-width: $mobile-layout-width;
+
+    h2 {
+      font: bold 18px/21px $font-family;
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .consult__form {
+    flex-direction: column;
+    height: auto;
+
+    input,
+    button {
+      height: 50px;
+    }
+    input {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
